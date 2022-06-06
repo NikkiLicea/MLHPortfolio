@@ -123,6 +123,27 @@ footer {
     transition: 0.28s;
 }
 
+/* WORK */
+.intern-link {
+    color: #B31B1B;
+}
+
+.mlh-link {
+    color: green;
+}
+
+.job-link {
+    color: blue;
+}
+
+.other-job-link {
+    color: orangered;
+}
+
+.project-link {
+    color: magenta;
+}
+
 /* RESPONSIVE */
 .content-web {
     display: none;

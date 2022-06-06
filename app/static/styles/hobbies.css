@@ -123,6 +123,16 @@ footer {
     transition: 0.28s;
 }
 
+/* HOBBIES */
+.hobby-picture {
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    height: 15em;
+    width: 15em;
+    border-radius: 100em;
+}
+
 /* RESPONSIVE */
 .content-web {
     display: none;
