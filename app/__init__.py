@@ -24,6 +24,10 @@ def hobbies():
 def travel():
     return render_template('travel.html')
 
+@app.route("/timeline")
+def timeline():
+    return render_template('timeline.html', title="Timeline")
+
 # add MySQL Database
 mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
                      user=os.getenv("MYSQL_USER"),
