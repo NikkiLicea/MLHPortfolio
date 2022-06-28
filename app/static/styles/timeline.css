@@ -1,17 +1,11 @@
 /* TIMELINE */
-.in {
+.input {
     padding:8px;
     display:block;
     border:none;
     border-bottom:1px solid #ccc;
     width:100%;
-}
-
-.border {
     border:1px solid #ccc!important;
-}
-
-.timeline_margin {
     margin-top:16px!important;
     margin-bottom:16px!important;
 }
