@@ -26,7 +26,7 @@ def travel():
 
 @app.route("/timeline")
 def timeline():
-    return render_template('timeline.html', title="Timeline")
+    return render_template('timeline.html')
 
 # add MySQL Database
 mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
