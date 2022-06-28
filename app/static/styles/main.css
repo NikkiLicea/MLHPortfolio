@@ -79,6 +79,27 @@ a {
     grid-column: 1 / 7;
 }
 
+/* SUMMARY */
+.summary {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+/* BODY */
+.main {
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+.content {
+    display: grid;
+    grid-column-gap: 5vw;
+    grid-template-columns: auto;
+    grid-row-gap: 10vw;
+    grid-template-rows: auto auto auto;
+    position: relative;
+    margin-top: 3em;
+}
+
 /* HEADER */
 .hero {
     position: relative;
