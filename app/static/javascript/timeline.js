@@ -25,7 +25,7 @@ const form = document.getElementById('timeline_form');
 // getapi(api_url);
 
 /* Sending the URL-encoded string as payload using Fetch */
-form.addEventListener('submit', function(e) {
+form.addEventListener('timeline_form', function(e) {
     // Prevent default behavior:
     e.preventDefault();
 
