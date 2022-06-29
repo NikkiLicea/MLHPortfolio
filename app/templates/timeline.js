@@ -24,25 +24,25 @@ async function getapi(url) {
 getapi(api_url);
 
 /* Sending the URL-encoded string as payload using Fetch */
-form.addEventListener('submit', function(e) {
-    // Prevent default behavior:
-    e.preventDefault();
+// form.addEventListener('submit', function(e) {
+//     // Prevent default behavior:
+//     e.preventDefault();
 
-    // Convert formData object to URL-encoded string:
-    const payload = new FormData(form);
+//     // Convert formData object to URL-encoded string:
+//     const payload = new FormData(form);
 
-    // Post the payload using Fetch:
-    fetch('/api/timeline_post', {
-        method: 'POST',
-        body: form
-    })
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .finally(function () {
-        setTimeout(function(){
-            window.location.reload();}, 100);
-        })
-})
+//     // Post the payload using Fetch:
+//     fetch('/api/timeline_post', {
+//         method: 'POST',
+//         body: form
+//     })
+//     .then(res => res.json())
+//     .then(data => console.log(data))
+//     .finally(function () {
+//         setTimeout(function(){
+//             window.location.reload();}, 100);
+//         })
+// })
 
 // Function to define innerHTML for HTML table
 function show(data) {
