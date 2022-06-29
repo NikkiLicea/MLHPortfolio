@@ -9,7 +9,6 @@ form.addEventListener('submit', function(e) {
 
 // Defining async function
 async function getapi(){
-	
 	// Storing response
 	const response = await fetch('/api/timeline_post', {
         method: 'POST',
@@ -48,7 +47,7 @@ function show(data) {
         <td>${r.content}</td>
         </tr>`;
 	}
-    
+
 	// Setting innerHTML as tab variable
 	document.getElementById("timeline_table").innerHTML = tab;
 }
