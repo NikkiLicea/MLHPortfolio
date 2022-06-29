@@ -8,9 +8,9 @@ const form = document.getElementById('timeline_form');
 async function getapi(url) {
 
 	// Storing response
-	const response = await fetch('/api/timeline_post', {
+	const response = await fetch(url, {
         method: 'POST',
-        body: 
+        body: form
     });
 
 	// Storing data in form of JSON
