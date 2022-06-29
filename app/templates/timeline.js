@@ -16,10 +16,8 @@ const form = document.getElementById('timeline_form');
 form.addEventListener('submit', function(e) {
     // Prevent default behavior:
     e.preventDefault();
-    // Create new FormData object:
-    const formData = new FormData(form);
     // Convert formData object to URL-encoded string:
-    const payload = new URLSearchParams(formData);
+    const payload = new FormData(form);
     // Post the payload using Fetch:
     fetch('/api/timeline_post', {
         method: 'POST',
@@ -27,7 +25,11 @@ form.addEventListener('submit', function(e) {
     })
     .then(res => res.json())
     .then(data => console.log(data))
-})
+    .finally(function () {
+        setTimeout(function(){
+            window.location.reload();}, 100);
+        })
+    })
 
 // Defining async function
 // async function getapi(){
