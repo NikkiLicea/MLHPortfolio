@@ -47,7 +47,7 @@ form.addEventListener('submit', function(e) {
 })
 
 // Function to define innerHTML for HTML table
-function show(data) {
+function show(payload) {
 	let tab =
 		`<tr>
 		<th>Name</th>
@@ -56,7 +56,7 @@ function show(data) {
 		</tr>`;
 	
 	// Loop to access all rows
-	for (let r of data.list) {
+	for (let r of payload.list) {
 		tab += `<tr>
         <td>${r.name} </td>
         <td>${r.email}</td>
