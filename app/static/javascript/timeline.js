@@ -1,27 +1,5 @@
-// api url
-// const api_url = '/api/timeline_post'; 
-
+// POST form data using JavaScript’s Fetch API
 const form = document.getElementById('timeline_form');
-// Defining async function
-// async function getapi(url) {
-
-// 	// Storing response
-// 	const response = await fetch(url, {
-//         method: 'POST',
-//         body: form
-//     });
-
-// 	// Storing data in form of JSON
-// 	var data = await response.json();
-// 	console.log(data);
-// 	if (response) {
-// 		hideloader();
-// 	}
-// 	show(data);
-// }
-// // Calling that async function
-// getapi(api_url);
-
 /* Sending the URL-encoded string as payload using Fetch */
 form.addEventListener('submit', function(e) {
     // Prevent default behavior:
@@ -45,6 +23,29 @@ form.addEventListener('submit', function(e) {
             window.location.reload();}, 100);
         })
 })
+
+// api url
+const api_url = '/api/timeline_post'; 
+
+// Defining async function
+async function getapi(url) {
+
+	// Storing response
+	const response = await fetch(url, {
+        method: 'POST',
+        body: form
+    });
+
+	// Storing data in form of JSON
+	var data = await response.json();
+	console.log(data);
+	if (response) {
+		hideloader();
+	}
+	show(data);
+}
+// Calling that async function
+getapi(api_url);
 
 // Function to define innerHTML for HTML table
 function show(payload) {
