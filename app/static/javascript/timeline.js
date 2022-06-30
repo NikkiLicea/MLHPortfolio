@@ -31,10 +31,7 @@ const api_url = '/api/timeline_post';
 async function getapi(url) {
 
 	// Storing response
-	const response = await fetch(url, {
-        method: 'POST',
-        body: form
-    });
+	const response = await fetch(url);
 
 	// Storing data in form of JSON
 	var data = await response.json();
@@ -48,7 +45,7 @@ async function getapi(url) {
 getapi(api_url);
 
 // Function to define innerHTML for HTML table
-function show(payload) {
+function show(data) {
 	let tab =
 		`<tr>
 		<th>Name</th>
@@ -57,7 +54,7 @@ function show(payload) {
 		</tr>`;
 	
 	// Loop to access all rows
-	for (let r of payload.list) {
+	for (let r of data.list) {
 		tab += `<tr>
         <td>${r.name} </td>
         <td>${r.email}</td>

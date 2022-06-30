@@ -39,7 +39,7 @@
 
     <main class="c12 main">    
         <p>Make a post to my timeline!</p>
-        <form action="/api/timeline_post" method="POST" enctype="multipart/form-data" id="timeline_form">
+        <form id="timeline_form" action="/api/timeline_post" method="POST" enctype="multipart/form-data">
             <input class="input" type="text" placeholder="Name" required name="name">
             <input class="input" type="text" placeholder="Email" required name="email">
             <input class="input" type="text" placeholder="Content" required name="content">
@@ -48,7 +48,7 @@
             </button>
         </form>
         
-        <p>Timeline Posts</p>
+        <p style="padding-top: 1%;">Timeline Posts</p>
         <!-- table for showing data -->
         <table id="timeline_table"></table>
     </main>
