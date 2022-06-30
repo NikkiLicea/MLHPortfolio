@@ -5,10 +5,12 @@ form.addEventListener('submit', function(e) {
     // Prevent default behavior:
     e.preventDefault();
 
+    // Create new FormData object:
+    const formData = new FormData(form);
     // Convert formData object to URL-encoded string:
-    const payload = new FormData(form);
+    const payload = new URLSearchParams(formData);
 
-    console.log([...payload])
+    console.log([...payload]);
 
     // Post the payload using Fetch:
     fetch('/api/timeline_post', {
@@ -18,10 +20,10 @@ form.addEventListener('submit', function(e) {
     .then(res => res.json())
     .then(data => console.log(data))
     .catch(err => console.log(err))
-    .finally(function () {
-        setTimeout(function(){
-            window.location.reload();}, 100);
-        })
+    // .finally(function () {
+    //     setTimeout(function(){
+    //         window.location.reload();}, 100);
+    //     })
 })
 
 // api url
