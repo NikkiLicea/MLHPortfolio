@@ -29,4 +29,9 @@
 
 th {
     text-align: left;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+td {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
