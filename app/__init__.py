@@ -35,6 +35,7 @@ mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
                      host=os.getenv("MYSQL_HOST"),
                      port=3306)
 print(mydb)
+# db.close() // may be necessary?
 
 # ORM model/Create Database Table
 class TimelinePost(Model):
@@ -47,6 +48,7 @@ class TimelinePost(Model):
         database = mydb
 mydb.connect()
 mydb.create_tables([TimelinePost])
+# db.close() // may be necessary?
 
 # new POST route which adds a timeline post
 @app.route('/api/timeline_post', methods = ['POST'])
