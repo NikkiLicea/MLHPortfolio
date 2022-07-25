@@ -28,11 +28,11 @@ def travel():
 def timeline():
     return render_template('timeline.html')
 
-# testing
-if os.getenv("TESTING") == "true":
+
+if os.getenv("TESTING") == "true":  # testing database
     print("Running in test mode")
     mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
-else:
+else:  # add MySQL Database
     mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
     user=os.getenv("MYSQL_USER"),
     password=os.getenv("MYSQL_PASSWORD"),
@@ -40,12 +40,6 @@ else:
     port=3306)
 
 
-# add MySQL Database
-mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
-                     user=os.getenv("MYSQL_USER"),
-                     password=os.getenv("MYSQL_PASSWORD"),
-                     host=os.getenv("MYSQL_HOST"),
-                     port=3306)
 print(mydb)
 # db.close() // may be necessary?
 
