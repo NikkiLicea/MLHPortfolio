@@ -34,6 +34,5 @@ class TestTimelinePost(unittest.TestCase):
 		second_post = TimelinePost.create(name='Jane Doe', email='jame@example.com', content='Hello world, I\'m Jane!')
 		assert second_post.id == 2
 		
-# 		response = get_time_line_post()
-		response = TimelinePost.get_time_linePost()
+		response = TimelinePost.select().order_by(TimelinePost.created_at.desc())
 		assert len(response['timeline_posts']) == 2
