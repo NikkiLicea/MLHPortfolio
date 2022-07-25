@@ -35,4 +35,4 @@ class TestTimelinePost(unittest.TestCase):
 		assert second_post.id == 2
 		
 		response = TimelinePost.select().order_by(TimelinePost.created_at.desc())
-		assert len(response['timeline_posts']) == 2
+		assert len(response) == 2
