@@ -40,7 +40,7 @@
         <p>Make a post to my timeline!</p>
         <form id="timeline_form" action="/api/timeline_post" method="POST" enctype="multipart/form-data">
             <input class="input" type="text" placeholder="Name" required name="name">
-            <input class="input" type="text" placeholder="Email" required name="email">
+            <input class="input" type="email" placeholder="Email" required name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
             <input class="input" type="text" placeholder="Content" required name="content">
             <button class="button" type="submit">
                 <i></i> SEND
