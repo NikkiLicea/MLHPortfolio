@@ -33,16 +33,16 @@ class AppTestCase(unittest.TestCase):
         response = self.client.post("/api/timeline_post", data={"email": "sristipanchu@gmail.com", "content": "Hiiii!"})
         assert response.status_code == 400
         html = response.get_data(as_text=True)
-        assert "Please fill out this field." in html
+        assert "Invalid Name" in html
 
         # Faulty email
         response = self.client.post("/api/timeline_post", data={"name": "sristi", "email": "hi", "content" : "Hi"})
         assert response.status_code == 400
         html = response.get_data(as_text=True)
-        assert "Please fill out this field." in html
+        assert "Invalid Content" in html
         
         # no content
         response = self.client.post("/api/timeline_post", data={"name": "Sristi", "email": "sristipanchu@gmail.com"})
         assert response.status_code == 400
         html = response.get_data(as_text=True)
-        assert "Please fill out this field." in html
+        assert "Invalid Content" in html
