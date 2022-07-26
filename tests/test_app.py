@@ -14,7 +14,7 @@ class AppTestCase(unittest.TestCase):
         response = self.client.get("/")
         assert response.status_code == 200
         html = response.get_data(as_text=True)
-        assert '<title>MLH Fellow</title>' in html
+        assert '<title>About · Nikki Licea</title>' in html
         # TODO Add more tests relating to the home page
 
     def test_timeline(self):
@@ -33,16 +33,16 @@ class AppTestCase(unittest.TestCase):
         response = self.client.post("/api/timeline_post", data={"email": "sristipanchu@gmail.com", "content": "Hiiii!"})
         assert response.status_code == 400
         html = response.get_data(as_text=True)
-        assert "No name provided" in html
-
-        # no content
-        response = self.client.post("/api/timeline_post", data={"name": "Sristi", "email": "sristipanchu@gmail.com"})
-        assert response.status_code == 400
-        html = response.get_data(as_text=True)
-        assert "No content provided" in html
+        assert "Please fill out this field." in html
 
         # Faulty email
         response = self.client.post("/api/timeline_post", data={"name": "sristi", "email": "hi", "content" : "Hi"})
         assert response.status_code == 400
         html = response.get_data(as_text=True)
-        assert "No email" in html
+        assert "Please fill out this field." in html
+        
+        # no content
+        response = self.client.post("/api/timeline_post", data={"name": "Sristi", "email": "sristipanchu@gmail.com"})
+        assert response.status_code == 400
+        html = response.get_data(as_text=True)
+        assert "Please fill out this field." in html
