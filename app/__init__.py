@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 from dotenv import load_dotenv
 from peewee import *  # abstracts away the need to manually create tables
 import datetime  # for TimelinePost
@@ -59,9 +59,18 @@ mydb.create_tables([TimelinePost])
 # new POST route which adds a timeline post
 @app.route('/api/timeline_post', methods = ['POST'])
 def post_time_line_post():
+    # Invalid Input Error Messages
+    if 'name' not in request.form or request.form['name'] == '':
+        return Response("Invalid Name", status = 400)
+    if 'email' not in request.form or validate(request.form['email']) == False:
+        return Response("Invalid Email", status = 400)
+    if 'content' not in request.form or request.form['content'] == '':
+        return Response("Invalid Content", status = 400)
+    
     name = request.form['name']
     email = request.form['email']
     content = request.form['content']
+    
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
     return model_to_dict(timeline_post)
 
