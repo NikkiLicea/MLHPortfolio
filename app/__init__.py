@@ -1,4 +1,5 @@
 import os
+import re
 from flask import Flask, render_template, request, Response
 from dotenv import load_dotenv
 from peewee import *  # abstracts away the need to manually create tables
@@ -59,6 +60,13 @@ mydb.create_tables([TimelinePost])
 # new POST route which adds a timeline post
 @app.route('/api/timeline_post', methods = ['POST'])
 def post_time_line_post():
+    # Email Validation
+    def validate(email):
+        pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        if re.match(pattern,email):
+            return True
+        return False
+
     # Invalid Input Error Messages
     if 'name' not in request.form or request.form['name'] == '':
         return Response("Invalid Name", status = 400)
