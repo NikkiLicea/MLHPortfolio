@@ -66,6 +66,9 @@ a {
 .scroll {
     padding-top: 1.5em;
 }
+.blue {
+    background-color:#2196F3;
+}
 
 /* GRID */
 .grid {
