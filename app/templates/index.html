@@ -1,89 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:title" content="Personal Portfolio">
-    <meta property="og:description" content="My Personal Portfolio">
-    <meta property="og:url" content="{{ url }}">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Personal Portfolio">
+  <meta property="og:description" content="My Personal Portfolio">
+  <meta property="og:url" content="{{ url }}">
 
-    <title>About · Nikki Licea</title>
+  <title>About · Nikki Licea</title>
+  
+  <!-- Bootstrap Links -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="./static/styles/main.css" type="text/css">
-    <link rel="stylesheet" href="./static/styles/index.css" type="text/css">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="./static/styles/main.css" type="text/css">
+  <link rel="stylesheet" href="./static/styles/index.css" type="text/css">
 </head>
 
-<body class="grid">
-    <!-- Header -->
-    <header class="c12">
-        <!-- Nav -->
-        <!-- <div class="hero">
-            <div class="header">
-                <h3 class="medium content-web">Nikki Licea</h3>
-                <nav class="nav">
-                    <h5 class="option"><a href="work">Work</a></h5>
-                    <h5 class="option"><a href="hobbies">Hobbies</a></h5>
-                    <h5 class="option"><a href="travel">Travel</a></h5>
-                    <h5 class="option"><a href="timeline">Timeline</a></h5>
-                </nav>
-            </div>
-        </div> -->
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid navbar-custom">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="/">Nikki Licea</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="work">Work</a></li>
+          <li><a href="hobbies">Hobbies</a></li>
+          <li><a href="travel">Travel</a></li>
+          <li><a href="timeline">Timeline</a></li>
+        </ul>
+      </div>
+    </div>
+</nav>
 
-        <nav class="navbar navbar-default blue">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                <a class="navbar-brand" href="/">Nikki Licea</a>
-              </div>
-              <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="work">Work</a></li>
-                  <li><a href="hobbies">Hobbies</a></li>
-                  <li><a href="travel">Travel</a></li>
-                  <li><a href="timeline">Timeline</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
-    
-    <main class="c12 summary main">
-        <div>
-            <p>
-                I’m currently a Production Engineer Fellow at <a href="https://mlh.io/" target="_blank" rel="noopener" class="link mlh-link">Major League Hacking</a> based in Los Angeles. I am currently a Computer Science major at the <a href="https://www.usc.edu/" target="_blank" rel="noopener" class="link uni-link">University of Southern California</a>. Before that, I was a Intern at <a href="https://mlh.io/" target="_blank" rel="noopener" class="link intern-link">Internship Company</a>.
-            </p><br>
-            <p>
-                To learn more about me please visit my <a href="hobbies">Hobbies</a> or <a href="travel">Travel</a> page. 
-            </p><br>
+<div class="jumbotron">
+  <div class="container-fluid text-center">
+    <div class="row">
+        <div class="col-sm-8">
+        <p>
+            I’m currently a Production Engineer Fellow at <a href="https://mlh.io/" target="_blank" rel="noopener" class="link mlh-link">Major League Hacking</a> based in Los Angeles. I am currently a Computer Science major at the <a href="https://www.usc.edu/" target="_blank" rel="noopener" class="link uni-link">University of Southern California</a>. Before that, I was a Intern at <a href="https://mlh.io/" target="_blank" rel="noopener" class="link intern-link">Internship Company</a>.
+        </p><br>
+        <p>
+            To learn more about me please visit my <a href="hobbies">Hobbies</a> or <a href="travel">Travel</a> page. 
+        </p><br>
         </div>
+        <div class="col-sm-4">
         <img alt="profile picture" src="./static/img/logo.jpeg" class="profile-picture">
-    </main>
-    
-    <footer class="c12 grid">
-        <div class="c6-left">
-            <p>If you’re looking to work with me please email me at <a href="mailto:nikkilicea@gmail.com" target="_blank" rel="noopener">nikkilicea@gmail.com</a>.</p>
         </div>
-        <div class="social">
-            <a href="https://twitter.com" target="_blank" rel="noopener"><img alt="Twitter icon" src="./static/img/twitter.svg" class="icons"></a>
-            <a href="https://github.com" target="_blank" rel="noopener"><img alt="Github icon" src="./static/img/github.svg" class="icons"></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener"><img alt="LinkedIn icon" src="./static/img/linkedin.svg" class="icons"></a>
-        </div>  
-    </footer>
-</body>
+    </div>
+  </div>
+</div>
 
+<footer class="container-fluid text-center">
+  <div class="c6-left">
+    <p>If you’re looking to work with me please email me at <a href="mailto:nikkilicea@gmail.com" target="_blank" rel="noopener">nikkilicea@gmail.com</a>.</p>
+  </div>
+  <div class="social">
+      <a href="https://twitter.com" target="_blank" rel="noopener"><img alt="Twitter icon" src="./static/img/twitter.svg" class="icons"></a>
+      <a href="https://github.com/nikkilicea" target="_blank" rel="noopener"><img alt="Github icon" src="./static/img/github.svg" class="icons"></a>
+      <a href="https://www.linkedin.com/in/nikki-licea/" target="_blank" rel="noopener"><img alt="LinkedIn icon" src="./static/img/linkedin.svg" class="icons"></a>
+  </div>
+</footer>
+
+</body>
 </html>
