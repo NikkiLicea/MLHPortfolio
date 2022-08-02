@@ -1,33 +1,13 @@
+/* Jumbotron */
+.jumbotron {
+    padding-top: 5%;
+    background-color: white;
+}
+
 .link:hover {
     opacity: 0.6;
     transition: 0.28s;
 }
-
-/* GLOBAL */ 
-.section {
-    margin-bottom: 3em;
-}
-
-/* SUMMARY */
-/* .summary {
-    display: grid;
-    grid-template-columns: 100%;
-} */
-
-/* BODY */
-/* .main {
-    margin-top: 3em;
-    margin-bottom: 1em;
-}
-.content {
-    display: grid;
-    grid-column-gap: 5vw;
-    grid-template-columns: auto;
-    grid-row-gap: 10vw;
-    grid-template-rows: auto auto auto;
-    position: relative;
-    margin-top: 3em;
-} */
 
 /* ABOUT */
 .profile-picture {
